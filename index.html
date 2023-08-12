@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Summarizer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      form {
+        margin: 0 auto;
+        width: 80%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+      }
+      label {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-right: 10px;
+      }
+      input[type="number"] {
+        width: 50px;
+        height: 30px;
+        font-size: 16px;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      input[type="button"] {
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 10px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      input[type="button"]:hover {
+        background-color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text Summarizer</h1>
+    <form action="/summarize" method="POST">
+      <textarea name="text" placeholder="Enter text to summarize"></textarea><br>
+      <label for="num_sentences">Number of Sentences:</label>
+      <input type="number" name="num_sentences" min="0" max="10" value="3"><br>
+      <input type="submit" value="Summarize">
+      <input type="button" value="Clear">
+    </form>
+    <script>
+      document.querySelector('input[type="button"]').addEventListener('click', function() {
+        document.querySelector('textarea').value = '';
+        document.querySelector('input[type="number"]').value = '3';
+      });
+    </script>
+  </body>
+</html>
