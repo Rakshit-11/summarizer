@@ -1,13 +1,14 @@
 # Article Summarizer Web App
 
-This repository contains a web application built with Flask that summarizes articles from URLs provided by users. The app extracts the main content from the provided URL using web scraping, processes the text, and generates a concise summary using natural language processing techniques.
+This project provides a simple Python script for automatically summarizing text using the Natural Language Toolkit (NLTK) library. The script takes a piece of text as input and generates a summary containing the most important sentences.
+
 ## Features
 
-- User-friendly web interface for inputting article URLs and generating summaries.
-- Efficient summarization algorithm based on frequency analysis and sentence scoring.
-- Utilizes the Natural Language Toolkit (NLTK) for tokenization and stop word removal.
-- Web scraping with BeautifulSoup to extract the main text content from articles.
-- Easily deployable on local machines or cloud platforms.
+- Tokenizes input text into sentences and words.
+- Removes common stop words to focus on meaningful content.
+- Creates a frequency distribution of words to identify important terms.
+- Calculates sentence scores based on the frequency of important words.
+- Extracts the top N sentences with the highest scores to form the summary.
 
 ## Installation
 
@@ -35,7 +36,7 @@ Open a web browser and go to http://localhost:5000 to access the summarizer app.
 ## Acknowledgements
 
 - This app uses NLTK, a wonderful library for natural language processing in Python.
-- The web scraping component is built using BeautifulSoup, making it easy to extract data from websites.
+
 
 ![image](https://github.com/Rakshit-11/summarizer/assets/81368972/c148d6ec-6e56-4bdd-8311-2742ba7f98ec)
 
