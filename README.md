@@ -36,3 +36,5 @@ Open a web browser and go to http://localhost:5000 to access the summarizer app.
 
 - This app uses NLTK, a wonderful library for natural language processing in Python.
 - The web scraping component is built using BeautifulSoup, making it easy to extract data from websites.
+
+
